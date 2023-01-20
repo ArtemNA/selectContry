@@ -1,0 +1,28 @@
+<div class="wrapper">
+  <mat-card class="content">
+    <div class="search-bar">
+      <mat-form-field appearance="outline">
+        <input #nameInput
+               matInput
+               [formControl]="formControl">
+        <mat-label>Search</mat-label>
+      </mat-form-field>
+      <hr>
+    </div>
+    <div class="actions">
+      <mat-slide-toggle [formControl]="isCheckedOnly" disableRipple>Show selected only</mat-slide-toggle>
+      <button mat-button (click)="clearFilters()">Clear all</button>
+    </div>
+    <div class="country-list">
+        <div class="country-item" *ngFor="let o of filteredList">
+          <mat-checkbox class="example-margin" [(ngModel)]="o.checked" disableRipple>{{o.flag}} {{o.name}}</mat-checkbox>
+        </div>
+    </div>
+     <div>
+       <hr>
+       <div class="footer">
+         <button mat-flat-button>Save</button>
+       </div>
+     </div>
+  </mat-card>
+</div>

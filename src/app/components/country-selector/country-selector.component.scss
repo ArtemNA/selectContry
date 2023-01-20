@@ -1,0 +1,134 @@
+.wrapper {
+  height: 80vh;
+  display: flex;
+
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ECECEC;
+    padding: 0;
+    margin-top: 0;
+    width: 94%;
+  }
+
+  .content {
+    width: 500px;
+    height: 450px;
+    padding: 20px;
+    margin: auto;
+    border: 1px solid #E1E3E6;
+    box-shadow: 9px 32px 35px rgba(0, 0, 0, 0.0464653);
+    border-radius: 14px;
+
+    .search-bar mat-form-field {
+      width: 100%;
+    }
+
+    ::ng-deep .actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #232323;
+      padding: 0 5px 0 11px;
+      margin-bottom: 10px;
+
+      label, span {
+        font-weight: 550;
+      }
+
+      .mat-mdc-slide-toggle .mdc-switch {
+        .mdc-switch__track {
+          height: 20px;
+          border-radius: 10px;
+        }
+        .mdc-switch__icons {
+          box-shadow: 0px 2.17647px 5.80392px rgb(0 0 0 / 15%);
+          border-radius: 50%;
+          height: 17px;
+          width: 17px;
+          background: white;
+          margin: auto;
+        }
+        .mdc-switch__shadow {
+          display: none;
+        }
+        .mdc-switch__handle::before, .mdc-switch__handle::after {
+          display: none;
+        }
+
+        &:enabled .mdc-switch__track::after {
+          background: #457DF1;
+        }
+        .mdc-switch__ripple::after {
+          background: #457DF1;
+        }
+      }
+    }
+
+    .country-list {
+      max-height: 250px;
+      height: 100%;
+      overflow-y: scroll;
+
+      ::ng-deep .mat-mdc-checkbox label {
+        color: #343434;
+      }
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: row-reverse;
+
+      button {
+        width: 87px;
+        height: 38px;
+        color: white;
+        background: #60D09B;
+        border-radius: 50px;
+        font-family: 'Campton-Book', serif;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: center;
+        letter-spacing: -0.5px;
+      }
+    }
+
+    ::ng-deep .mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__trailing,
+    ::ng-deep .mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__notch,
+    ::ng-deep .mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__leading{
+      border: none;
+    }
+    ::ng-deep .mat-mdc-form-field-subscript-wrapper {
+      height: 0px;
+    }
+
+    ::ng-deep {
+      .mat-mdc-checkbox .mdc-checkbox .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate):not([data-indeterminate=true])~.mdc-checkbox__background {
+        background: #ECECEC;
+        border-radius: 8px;
+        border: 0px;
+        width: 22px;
+        height: 22px;
+        margin-top: -2px;
+      }
+      .mat-mdc-checkbox .mdc-checkbox .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background, .mat-mdc-checkbox .mdc-checkbox .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background, .mat-mdc-checkbox .mdc-checkbox .mdc-checkbox__native-control[data-indeterminate=true]:enabled~.mdc-checkbox__background {
+        background: #457DF1;
+        border-radius: 8px;
+        border: 0px;
+        width: 22px;
+        height: 22px;
+        margin-top: -2px;
+
+        svg {
+          width: 14px;
+          height: 14px;
+          margin: auto;
+        }
+      }
+      .mdc-checkbox__ripple {
+        display: none;
+      }
+    }
+  }
+}
